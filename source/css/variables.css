@@ -41,14 +41,14 @@
   /* Components */
   --component-bg-color: #f2f2f2;
   --component-border-color: #ddd;
-  --component-border-radius: .25rem;
+  --component-border-radius: 0.25rem;
   --component-border-width: 1px;
   --component-focus-width: 2px;
   --component-padding-x: 1rem;
   --component-padding-y: 1rem;
-  --component-speed: .1s;
-  --component-box-shadow-inner: inset 0 1px 1px rgba(0, 0, 0, .05);
-  --component-box-shadow-outer: 0 1px 0 rgba(0, 0, 0, .05);
+  --component-speed: 0.1s;
+  --component-box-shadow-inner: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  --component-box-shadow-outer: 0 1px 0 rgba(0, 0, 0, 0.05);
 
   /*************************************************************************************************
   * Alerts
@@ -67,7 +67,9 @@
   /* Secondary */
   --alert-bg-color-secondary: color(var(--state-secondary) tint(75%));
   --alert-color-secondary: color(var(--state-secondary) lightness(25%));
-  --alert-border-color-secondary: color(var(--alert-bg-color-secondary) shade(5%));
+  --alert-border-color-secondary: color(
+    var(--alert-bg-color-secondary) shade(5%)
+  );
 
   /* Success */
   --alert-bg-color-success: color(var(--state-success) tint(75%));
@@ -103,8 +105,8 @@
   * Badges
   *************************************************************************************************/
 
-  --badge-font-size: .8em; /* ems for relative sizing */
-  --badge-border-radius: 1em;  /* ems for relative sizing */
+  --badge-font-size: 0.8em; /* ems for relative sizing */
+  --badge-border-radius: 1em; /* ems for relative sizing */
   --badge-focus-width: var(--component-focus-width);
   --badge-speed: var(--component-speed);
 
@@ -161,7 +163,7 @@
   --button-focus-width: var(--component-focus-width);
   --button-speed: var(--component-speed);
   --button-loader-size: 1em;
-  --button-loader-border-width: .15em;
+  --button-loader-border-width: 0.15em;
 
   /* Default */
   --button-color: var(--color-white);
@@ -215,13 +217,13 @@
   --code-color: var(--color-black);
   --code-border-radius: var(--component-border-radius);
   --code-bg-color: var(--component-bg-color);
-  --code-padding-x: calc(var(--font-size) * .4);
-  --code-padding-y: calc(var(--font-size) * .2);
+  --code-padding-x: calc(var(--font-size) * 0.4);
+  --code-padding-y: calc(var(--font-size) * 0.2);
 
   --headings-font-family: var(--font-system);
   --headings-font-weight: var(--font-weight-light);
   --headings-line-height: 1.1;
-  --headings-margin-bottom: .5rem;
+  --headings-margin-bottom: 0.5rem;
   --headings-color: inherit;
   --headings-font-size-h1: 2.5rem;
   --headings-font-size-h2: 2rem;
@@ -239,8 +241,8 @@
   --kbd-color: var(--color-white);
   --kbd-border-radius: var(--component-border-radius);
   --kbd-bg-color: var(--color-black);
-  --kbd-padding-x: calc(var(--font-size) * .4);
-  --kbd-padding-y: calc(var(--font-size) * .2);
+  --kbd-padding-x: calc(var(--font-size) * 0.4);
+  --kbd-padding-y: calc(var(--font-size) * 0.2);
 
   --link-color: var(--state-primary);
   --link-text-decoration: none;
@@ -249,8 +251,8 @@
 
   --mark-color: inherit;
   --mark-bg-color: var(--color-yellow);
-  --mark-padding-x: calc(var(--font-size) * .4);
-  --mark-padding-y: calc(var(--font-size) * .2);
+  --mark-padding-x: calc(var(--font-size) * 0.4);
+  --mark-padding-y: calc(var(--font-size) * 0.2);
 
   --placeholder-color: var(--body-color-muted);
 
@@ -281,13 +283,13 @@
   --dropdown-box-shadow: var(--component-box-shadow-outer);
   --dropdown-line-height: var(--line-height);
   --dropdown-padding-x: 1rem;
-  --dropdown-padding-y: .25rem;
+  --dropdown-padding-y: 0.25rem;
   --dropdown-offset-x: 0;
   --dropdown-offset-y: 1px;
   --dropdown-z-index: 100;
 
   --dropdown-caret-color: currentcolor;
-  --dropdown-caret-size: .5em;
+  --dropdown-caret-size: 0.5em;
   --dropdown-caret-width: 2px;
 
   --dropdown-divider-color: var(--component-border-color);
@@ -306,8 +308,8 @@
   --input-height: 2.25rem;
   --input-height-lg: 2.75rem;
   --input-height-xl: 3.25rem;
-  --input-font-size-xs: .625rem;
-  --input-font-size-sm: .875rem;
+  --input-font-size-xs: 0.625rem;
+  --input-font-size-sm: 0.875rem;
   --input-font-size: 1rem;
   --input-font-size-lg: 1.25rem;
   --input-font-size-xl: 1.5rem;
@@ -330,10 +332,10 @@
   --input-hint-font-size: var(--font-size-small);
 
   --input-icon-width: 2em;
-  --input-icon-offset: .5em;
+  --input-icon-offset: 0.5em;
   --input-icon-color: var(--state-secondary);
 
-  --input-range-track-height: .5rem;
+  --input-range-track-height: 0.5rem;
   --input-range-track-color: var(--component-bg-color);
   --input-range-track-box-shadow: var(--component-box-shadow-inner);
   --input-range-thumb-height: 1.25rem;
@@ -367,7 +369,7 @@
   * Loaders
   *************************************************************************************************/
 
-  --loader-thickness: .2rem;
+  --loader-thickness: 0.2rem;
   --loader-thickness-xs: calc(var(--loader-thickness) / 2);
   --loader-thickness-sm: calc(var(--loader-thickness) / 1.5);
   --loader-thickness-lg: calc(var(--loader-thickness) * 1.5);
@@ -378,7 +380,7 @@
   --loader-size-lg: var(--input-height-lg);
   --loader-size-xl: var(--input-height-xl);
   --loader-speed: 750ms;
-  --loader-margin-x: .5em;
+  --loader-margin-x: 0.5em;
   --loader-margin-y: 0;
 
   /* Default */
@@ -439,11 +441,11 @@
   * Switches
   *************************************************************************************************/
 
-  --switch-height: calc(var(--input-height) * .75);
-  --switch-height-xs: calc(var(--input-height-xs) * .75);
-  --switch-height-sm: calc(var(--input-height-sm) * .75);
-  --switch-height-lg: calc(var(--input-height-lg) * .75);
-  --switch-height-xl: calc(var(--input-height-xl) * .75);
+  --switch-height: calc(var(--input-height) * 0.75);
+  --switch-height-xs: calc(var(--input-height-xs) * 0.75);
+  --switch-height-sm: calc(var(--input-height-sm) * 0.75);
+  --switch-height-lg: calc(var(--input-height-lg) * 0.75);
+  --switch-height-xl: calc(var(--input-height-xl) * 0.75);
   --switch-font-size: var(--input-font-size);
   --switch-font-size-xs: var(--input-font-size-xs);
   --switch-font-size-sm: var(--input-font-size-sm);
@@ -503,8 +505,8 @@
   --table-border-color: var(--component-border-color);
   --table-border-width: var(--component-border-width);
   --table-header-bg-color: transparent;
-  --table-spacing-x: .75rem;
-  --table-spacing-y: .5rem;
+  --table-spacing-x: 0.75rem;
+  --table-spacing-y: 0.5rem;
   --table-hover-color: var(--color-white);
   --table-hover-bg-color: var(--state-primary);
   --table-stripe-bg-color: var(--component-bg-color);
@@ -536,7 +538,7 @@
   * Utilities
   *************************************************************************************************/
 
-  --spacing-xs: .5rem;
+  --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;

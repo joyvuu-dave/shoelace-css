@@ -43,7 +43,7 @@
 
   & .tabs-pane {
     border: solid var(--tab-pane-border-width) var(--tab-pane-border-color);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     padding: var(--tab-pane-padding-y) var(--tab-pane-padding-x);
 
     &:not(.active) {

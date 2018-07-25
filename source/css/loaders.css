@@ -88,7 +88,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(50% - var(--loader-size) / 2);
     left: calc(50% - var(--loader-size) / 2);
@@ -181,6 +181,10 @@
 }
 
 @keyframes loader {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

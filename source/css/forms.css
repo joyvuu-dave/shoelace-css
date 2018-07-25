@@ -8,7 +8,7 @@ fieldset {
 
   & legend {
     font-weight: var(--font-weight-bold);
-    padding: 0 .25rem;
+    padding: 0 0.25rem;
   }
 
   & > :last-child {
@@ -19,7 +19,7 @@ fieldset {
 label {
   color: var(--label-color);
   display: inline-block;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 
   & + label {
     margin-left: 1rem;
@@ -54,13 +54,11 @@ textarea {
   line-height: var(--input-height);
   vertical-align: middle;
   display: block;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   margin: 0;
-  transition:
-    var(--input-speed) border-color,
-    var(--component-speed) background-color,
-    var(--component-speed) color;
+  transition: var(--input-speed) border-color,
+    var(--component-speed) background-color, var(--component-speed) color;
   white-space: nowrap;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -71,7 +69,7 @@ textarea {
   }
 
   &[disabled] {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed;
   }
 
@@ -80,7 +78,7 @@ textarea {
   }
 
   &[type="color"] {
-    padding: .5rem;
+    padding: 0.5rem;
 
     &::-webkit-color-swatch-wrapper {
       padding: 0;
@@ -125,9 +123,9 @@ input[type="radio"] {
 select {
   position: relative;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='41px' height='26px' viewBox='0 0 41 26' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpolygon id='Path-3' fill='%23000000' points='0 5.38215461 19.9830489 25.3652035 40.1398855 5.20836689 34.9315186 0 19.8691842 15.0623344 4.83971338 0.0328636246'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E%0A");
-  background-position: right .4rem center;
+  background-position: right 0.4rem center;
   background-repeat: no-repeat;
-  background-size: .75rem;
+  background-size: 0.75rem;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 1.5rem;
@@ -175,7 +173,9 @@ input[type="range"] {
     background: var(--input-range-thumb-color);
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: calc(var(--input-range-thumb-height) / -2 + var(--input-range-track-height) / 2);
+    margin-top: calc(
+      var(--input-range-thumb-height) / -2 + var(--input-range-track-height) / 2
+    );
   }
 
   &:focus {
@@ -184,7 +184,8 @@ input[type="range"] {
     }
 
     &::-webkit-slider-thumb {
-      box-shadow: 0 0 0 var(--component-focus-width) color(var(--input-range-thumb-color) alpha(50%));
+      box-shadow: 0 0 0 var(--component-focus-width)
+        color(var(--input-range-thumb-color) alpha(50%));
     }
   }
 
@@ -209,7 +210,8 @@ input[type="range"] {
   }
 
   &:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 var(--component-focus-width) color(var(--input-range-thumb-color) alpha(50%));
+    box-shadow: 0 0 0 var(--component-focus-width)
+      color(var(--input-range-thumb-color) alpha(50%));
   }
 
   /* IE / Edge */
@@ -245,7 +247,8 @@ input[type="range"] {
   }
 
   &:focus::-ms-thumb {
-    box-shadow: 0 0 0 var(--component-focus-width) color(var(--input-range-thumb-color) alpha(50%));
+    box-shadow: 0 0 0 var(--component-focus-width)
+      color(var(--input-range-thumb-color) alpha(50%));
   }
 
   &:focus::-ms-fill-lower {
@@ -324,7 +327,7 @@ input[type="range"] {
 .input-hint {
   font-size: var(--input-hint-font-size);
   color: var(--input-hint-color);
-  margin: .25rem 0 0 0;
+  margin: 0.25rem 0 0 0;
   display: block;
 }
 
@@ -343,7 +346,7 @@ input[type="range"] {
   border-bottom: solid var(--input-border-width) var(--input-border-color);
   background: var(--input-addon-bg-color);
   color: var(--input-addon-color);
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   white-space: nowrap;
 
   &:first-child {

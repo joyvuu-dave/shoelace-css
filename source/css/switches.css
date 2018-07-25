@@ -26,12 +26,12 @@
       outline: none;
       user-select: none;
       vertical-align: middle;
-      text-indent: calc(var(--switch-height) * 2 + .5rem);
+      text-indent: calc(var(--switch-height) * 2 + 0.5rem);
     }
 
     & + label::before,
     & + label::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -67,11 +67,12 @@
 
     &:focus + label::before {
       outline: none;
-      box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color) alpha(50%));
+      box-shadow: 0 0 0 var(--switch-focus-width)
+        color(var(--switch-color) alpha(50%));
     }
 
     &:disabled + label {
-      opacity: .5;
+      opacity: 0.5;
       cursor: not-allowed;
     }
   }
@@ -89,7 +90,7 @@
         min-width: calc(var(--switch-height-xs) * 2);
         height: var(--switch-height-xs);
         line-height: var(--switch-height-xs);
-        text-indent: calc(var(--switch-height-xs) * 2 + .5rem);
+        text-indent: calc(var(--switch-height-xs) * 2 + 0.5rem);
       }
 
       & + label::before,
@@ -116,7 +117,7 @@
         min-width: calc(var(--switch-height-sm) * 2);
         height: var(--switch-height-sm);
         line-height: var(--switch-height-sm);
-        text-indent: calc(var(--switch-height-sm) * 2 + .5rem);
+        text-indent: calc(var(--switch-height-sm) * 2 + 0.5rem);
       }
 
       & + label::before,
@@ -143,7 +144,7 @@
         min-width: calc(var(--switch-height-lg) * 2);
         height: var(--switch-height-lg);
         line-height: var(--switch-height-lg);
-        text-indent: calc(var(--switch-height-lg) * 2 + .5rem);
+        text-indent: calc(var(--switch-height-lg) * 2 + 0.5rem);
       }
 
       & + label::before,
@@ -170,7 +171,7 @@
         min-width: calc(var(--switch-height-xl) * 2);
         height: var(--switch-height-xl);
         line-height: var(--switch-height-xl);
-        text-indent: calc(var(--switch-height-xl) * 2 + .5rem);
+        text-indent: calc(var(--switch-height-xl) * 2 + 0.5rem);
       }
 
       & + label::before,
@@ -194,10 +195,19 @@
     & input {
       background-color: var(--switch-bg-color-secondary);
 
-      & + label::after { background-color: var(--switch-thumb-color-secondary); }
-      & + label::before { background-color: var(--switch-bg-color-secondary); }
-      &:checked + label::before { background-color: var(--switch-color-secondary); }
-      &:focus + label::before { box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-secondary) alpha(50%)); }
+      & + label::after {
+        background-color: var(--switch-thumb-color-secondary);
+      }
+      & + label::before {
+        background-color: var(--switch-bg-color-secondary);
+      }
+      &:checked + label::before {
+        background-color: var(--switch-color-secondary);
+      }
+      &:focus + label::before {
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-secondary) alpha(50%));
+      }
     }
   }
 
@@ -218,7 +228,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-success) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-success) alpha(50%));
       }
     }
   }
@@ -240,7 +251,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-info) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-info) alpha(50%));
       }
     }
   }
@@ -262,7 +274,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-warning) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-warning) alpha(50%));
       }
     }
   }
@@ -284,7 +297,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-danger) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-danger) alpha(50%));
       }
     }
   }
@@ -306,7 +320,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-light) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-light) alpha(50%));
       }
     }
   }
@@ -328,7 +343,8 @@
       }
 
       &:focus + label::before {
-        box-shadow: 0 0 0 var(--switch-focus-width) color(var(--switch-color-dark) alpha(50%));
+        box-shadow: 0 0 0 var(--switch-focus-width)
+          color(var(--switch-color-dark) alpha(50%));
       }
     }
   }

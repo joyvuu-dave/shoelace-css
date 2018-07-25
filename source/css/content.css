@@ -55,8 +55,8 @@ strong {
 
 blockquote {
   font-size: 120%;
-  border-left: solid .4rem var(--component-border-color);
-  padding: .5rem .5rem .5rem 1rem;
+  border-left: solid 0.4rem var(--component-border-color);
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   margin-bottom: 1.5rem;
   margin-left: 0;
 }
@@ -97,12 +97,24 @@ h6 {
   margin-bottom: var(--headings-margin-bottom);
 }
 
-h1 { font-size: var(--headings-font-size-h1); }
-h2 { font-size: var(--headings-font-size-h2); }
-h3 { font-size: var(--headings-font-size-h3); }
-h4 { font-size: var(--headings-font-size-h4); }
-h5 { font-size: var(--headings-font-size-h5); }
-h6 { font-size: var(--headings-font-size-h6); }
+h1 {
+  font-size: var(--headings-font-size-h1);
+}
+h2 {
+  font-size: var(--headings-font-size-h2);
+}
+h3 {
+  font-size: var(--headings-font-size-h3);
+}
+h4 {
+  font-size: var(--headings-font-size-h4);
+}
+h5 {
+  font-size: var(--headings-font-size-h5);
+}
+h6 {
+  font-size: var(--headings-font-size-h6);
+}
 
 hr {
   border: none;

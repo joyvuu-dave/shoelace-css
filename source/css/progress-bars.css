@@ -29,7 +29,8 @@
 
   &.progress-indeterminate .progress-bar {
     width: 75% !important;
-    animation: progress-indeterminate ease-in-out var(--progress-speed-indeterminate) infinite;
+    animation: progress-indeterminate ease-in-out
+      var(--progress-speed-indeterminate) infinite;
   }
 
   /* Sizes */

@@ -5,7 +5,7 @@
   color: var(--badge-color);
   background-color: var(--badge-bg-color);
   border-radius: var(--badge-border-radius);
-  padding: .2em .6em;
+  padding: 0.2em 0.6em;
   vertical-align: baseline;
   display: inline-block;
   transition: var(--badge-speed) all;
@@ -61,7 +61,8 @@ a.badge {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color) alpha(50%));
+    box-shadow: 0 0 0 var(--badge-focus-width)
+      color(var(--badge-bg-color) alpha(50%));
   }
 
   &.badge-secondary {
@@ -71,7 +72,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-secondary) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-secondary) alpha(50%));
     }
   }
 
@@ -82,7 +84,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-success) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-success) alpha(50%));
     }
   }
 
@@ -93,7 +96,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-info) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-info) alpha(50%));
     }
   }
 
@@ -104,7 +108,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-warning) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-warning) alpha(50%));
     }
   }
 
@@ -115,7 +120,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-danger) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-danger) alpha(50%));
     }
   }
 
@@ -126,7 +132,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-light) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-light) alpha(50%));
     }
   }
 
@@ -137,7 +144,8 @@ a.badge {
     }
 
     &:focus {
-      box-shadow: 0 0 0 var(--badge-focus-width) color(var(--badge-bg-color-dark) alpha(50%));
+      box-shadow: 0 0 0 var(--badge-focus-width)
+        color(var(--badge-bg-color-dark) alpha(50%));
     }
   }
 }
