@@ -14,6 +14,7 @@ const Path = require("path");
 const PostCSS = require("postcss");
 const Program = require("commander");
 const Watch = require("watch");
+const prettier = require("prettier");
 
 //
 // Builds all stylesheets.
@@ -62,113 +63,30 @@ function buildStyles() {
           Path.relative(__dirname, file)
         );
 
+        // Prettier
+        result.css = prettier.format(result.css, {
+          parser: "css"
+        });
+
         // Write output file
         return FS.writeFileAsync(file, result.css, "utf8");
       })
   );
 }
 
-//
-// Watches a directory for changes
-//
-//  - options (object)
-//    - path (string) - the path of the directory to watch.
-//    - ready (function) - callback to execute after initializing.
-//    - change (function(event, file)) - callback to execute when a file is changed.
-//
-// No return value.
-//
-function watch(options) {
-  options = options || {};
-
-  Watch.watchTree(
-    options.path,
-    {
-      ignoreDotFiles: true,
-      interval: 1
-    },
-    (file, current, previous) => {
-      if (typeof file === "object" && previous === null && current === null) {
-        if (typeof options.ready === "function") options.ready();
-      } else if (previous === null) {
-        if (typeof options.change === "function")
-          options.change({ type: "created" }, file);
-      } else if (current.nlink === 0) {
-        if (typeof options.change === "function")
-          options.change({ type: "deleted" }, file);
-      } else {
-        if (typeof options.change === "function")
-          options.change({ type: "modified" }, file);
-      }
-    }
-  );
-}
-
-// Initialize CLI
-Program.version(__version)
-  .option("--build", "Builds a release")
-  .option("--clean", "Removes existing release")
-  .option("--watch", "Watch for changes and build automatically")
-  .on("--help", () => {
-    console.log(Chalk.cyan("\n  Version %s\n"), __version);
-    process.exit(1);
-  })
-  .parse(process.argv);
-
-// Show help by default
-if (!process.argv.slice(2).length) {
-  Program.outputHelp();
-  process.exit(1);
-}
-
 // Build
-if (Program.build) {
-  Promise.resolve()
-    // Remove the dist folder
-    .then(() => Del(Path.join(__dirname, "dist")))
+Promise.resolve()
+  // Remove the dist folder
+  .then(() => Del(Path.join(__dirname, "dist")))
 
-    // Build styles
-    .then(() => buildStyles())
+  // Build styles
+  .then(() => buildStyles())
 
-    // Exit with success
-    .then(() => process.exit(1))
+  // Exit with success
+  .then(() => process.exit())
 
-    // Handle errors
-    .catch(err => {
-      console.error(Chalk.red(err));
-      process.exit(-1);
-    });
-}
-
-// Clean
-if (Program.clean) {
-  Promise.resolve()
-    // Delete /dist
-    .then(() => Del(Path.join(__dirname, "dist")))
-    .then(() => {
-      console.log(Chalk.green("/dist has been removed."));
-    })
-
-    // Exit with success
-    .then(() => process.exit(1))
-
-    // Handle errors
-    .catch(err => {
-      console.error(Chalk.red(err));
-      process.exit(-1);
-    });
-}
-
-// Watch
-if (Program.watch) {
-  // Watch styles
-  watch({
-    path: Path.join(__dirname, "source/css"),
-    ready: () => console.log(Chalk.cyan("Watching for style changes...")),
-    change: event => {
-      if (event.type === "created" || event.type === "modified") {
-        buildStyles();
-      }
-    }
+  // Handle errors
+  .catch(err => {
+    console.error(Chalk.red(err));
+    process.exit(-1);
   });
-}
