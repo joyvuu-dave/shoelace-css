@@ -1,5 +1,3 @@
-# <img src="https://shoelace.style/source/img/wordmark.svg" alt="Shoelace.css" width="380">
-
 A back to the basics CSS starter kit. For when you don’t need the whole boot.
 
 📚 [Website & Docs](https://shoelace.style)
